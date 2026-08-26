@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Preferred Source Checker for Google</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body class="psc-panel">
+  <header class="psc-header">
+    <svg class="psc-logo" viewBox="0 0 20 20" role="img" aria-label="Opace" width="20" height="20">
+      <circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      <circle cx="10" cy="10" r="3.2" fill="currentColor"/>
+    </svg>
+    <h1 class="psc-title">Preferred Source Checker <span class="psc-title-for">for Google</span></h1>
+  </header>
+  <main id="psc-main" tabindex="-1">
+    <section id="psc-domain" class="psc-domain-line"></section>
+    <section id="psc-eligibility" class="psc-card" aria-labelledby="psc-elig-h"></section>
+    <section id="psc-implementation" class="psc-card" aria-labelledby="psc-impl-h" aria-live="polite"></section>
+    <div id="psc-offline-banner" class="psc-offline-banner" hidden></div>
+    <div class="psc-actions" id="psc-actions">
+      <button id="psc-add-btn" class="psc-btn-primary" type="button"></button>
+      <p class="psc-caption" id="psc-add-caption"></p>
+      <button id="psc-copy-btn" class="psc-btn-secondary" type="button"></button>
+      <p class="psc-caption" id="psc-copy-caption"></p>
+      <div id="psc-copy-fallback" hidden>
+        <textarea id="psc-copy-textarea" class="psc-copy-textarea" readonly rows="7" aria-label="Embed snippet"></textarea>
+        <p class="psc-caption" id="psc-copy-helper"></p>
+      </div>
+      <div role="status" class="sr-only" id="psc-announcer"></div>
+    </div>
+  </main>
+  <footer class="psc-footer">
+    <span class="psc-footer-by" id="psc-footer-by"></span>
+    <span class="psc-footer-version" id="psc-footer-version"></span>
+  </footer>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

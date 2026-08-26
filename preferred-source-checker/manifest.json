@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Preferred Source Checker for Google",
+  "short_name": "Preferred Source Checker",
+  "version": "1.0.0",
+  "description": "Check any site's Google Preferred Sources eligibility, verify the button is installed correctly, and add it as preferred in one click.",
+  "author": "Opace Digital Agency",
+  "homepage_url": "https://opace.agency/add-as-preferred-source-button-for-google/button-checker/",
+  "minimum_chrome_version": "116",
+  "default_locale": "en",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Preferred Source Checker for Google",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "permissions": ["activeTab", "scripting", "storage", "clipboardWrite"]
+}

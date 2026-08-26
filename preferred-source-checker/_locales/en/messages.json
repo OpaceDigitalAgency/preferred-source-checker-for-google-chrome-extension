@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "Preferred Source Checker for Google",
+    "description": "Extension name for the Chrome Web Store listing."
+  },
+  "extDescription": {
+    "message": "Check any site's Google Preferred Sources eligibility, verify the button is installed correctly, and add it as preferred in one click.",
+    "description": "Extension description for the Chrome Web Store listing."
+  }
+}

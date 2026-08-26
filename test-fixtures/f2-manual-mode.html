@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>F2 — Manual-mode fixture</title>
+  <script async preferred-sources-control="manual"
+          src="https://news.google.com/swg/js/v1/publisher.js"></script>
+  <script>
+    (self.PREFERRED_SOURCE = self.PREFERRED_SOURCE || []).push(
+      function (preferredSource) {
+        preferredSource.init({ theme: 'light', lang: 'en' });
+        document.querySelector('#myButton').addEventListener('click', function () {
+          preferredSource.addPreferredSource();
+        });
+      });
+  </script>
+</head>
+<body>
+  <h1>F2 — manual mode with command queue</h1>
+  <p>SDK with preferred-sources-control="manual", inline PREFERRED_SOURCE queue, custom trigger, no deeplink.</p>
+  <button id="myButton" type="button">Prefer us on Google</button>
+</body>
+</html>

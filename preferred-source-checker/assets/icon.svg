@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Preferred Source Checker for Google — extension icon source.
+       Motif: white star (the "preferred" metaphor) with a small magnifier
+       overlapping its lower-right (the "checker"), on a rounded-square
+       Opace blue field. Flat, no gradients on the glyph (spec §5.6).
+       At 16 px, export the star only (hide the magnifier group). -->
+  <rect x="0" y="0" width="128" height="128" rx="24" fill="#0b57d0"/>
+  <g id="star">
+    <path fill="#ffffff" d="M60 22 L69.8 46.9 L96.5 48.7 L76 65.9 L82.5 91.8 L60 77.5 L37.5 91.8 L44 65.9 L23.5 48.7 L50.2 46.9 Z"/>
+  </g>
+  <g id="magnifier">
+    <circle cx="86" cy="86" r="17" fill="#0b57d0"/>
+    <circle cx="86" cy="86" r="17" fill="none" stroke="#ffffff" stroke-width="7"/>
+    <line x1="98" y1="98" x2="112" y2="112" stroke="#ffffff" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>
