@@ -1,29 +1,47 @@
-# Test fixtures — Preferred Source Checker for Google
+# Internal test fixtures
 
-Static pages implementing the spec §7.1 test matrix. Serve them over http —
-the extension deliberately refuses `file://` pages (state X2):
+These static pages exercise the Preferred Source Checker detector. They are development fixtures, not public product pages. Serve them over HTTP because the extension intentionally treats `file://` as empty state X2.
 
-    cd test-fixtures
-    python3 -m http.server 8000
+## Serve locally
 
-Then open e.g. http://localhost:8000/f1-auto-mode.html and click the
-extension icon. On localhost the eligibility card shows E5 (`Not checkable`)
-by design; the implementation checklist still runs. To exercise E1–E4,
-host this directory on a public domain (e.g. GitHub Pages) — F8 (subdomain)
-is F1 served from a subdomain of that host, so it needs real hosting and has
-no separate file here.
+From this directory:
 
-| File | Spec fixture | What it exercises |
-| :-- | :-- | :-- |
-| f1-auto-mode.html | F1 | async SDK, auto mode, themed button, matching deeplink (`q=localhost`) |
-| f2-manual-mode.html | F2 | manual mode, inline PREFERRED_SOURCE queue, custom trigger, no deeplink |
-| f3-empty.html | F3 | no SDK, no button, no deeplink |
-| f4-broken-install.html | F4 | button div without SDK; deeplink `q=other-domain.com` |
-| f5-hidden-button.html | F5 | SDK + button with `display:none` |
-| f6-no-async.html | F6 | SDK script without `async` |
-| blog/sample-post/index.html | F7 | F1 content under `/blog/…` (subdirectory advisory on a public host) |
-| f9-mjs.html | F9 | SDK loaded as `publisher.mjs` |
+```sh
+python3 -m http.server 8000
+```
 
-F1/F5/F6/F9 attempt to load the real Google SDK; where it does not render in
-your environment, the ⚠ "hasn't rendered" path is the expected (and correct)
-result — see spec §7.1.
+Open `http://localhost:8000/f1-auto-mode.html`, load the parent `preferred-source-checker/` folder through `chrome://extensions` with Developer mode enabled, then click the extension icon. Localhost should show eligibility state E5 (`Not checkable`), while the implementation detector still runs. The Add and Copy actions are disabled for the local host.
+
+## Fixture matrix
+
+| File | Spec case | Expected detector coverage |
+| --- | --- | --- |
+| `f1-auto-mode.html` | F1 | Async `publisher.js`, automatic mode, themed button, rendered iframe when Google's SDK responds, matching `q=localhost` deeplink. |
+| `f2-manual-mode.html` | F2 | Manual mode, inline `PREFERRED_SOURCE` queue, custom trigger and no deeplink. |
+| `f3-empty.html` | F3 | No SDK, button or deeplink. Exercises the not-implemented summary and fix rows. |
+| `f4-broken-install.html` | F4 | Button without SDK and a deeplink whose `q` points to `other-domain.com`. |
+| `f5-hidden-button.html` | F5 | Async SDK with a `display:none` button element. |
+| `f6-no-async.html` | F6 | SDK script without `async`. |
+| `blog/sample-post/index.html` | F7 | F1-shaped content under `/blog/`, for the subdirectory advisory on a public host. |
+| `f9-mjs.html` | F9 | Async `publisher.mjs` module script. |
+
+F8 is deliberately not a local file: it needs F1 content on a real subdomain. Host a separate test copy on a controlled public domain before testing E2. Do not treat a localhost result as evidence of public-domain eligibility.
+
+## Reading results
+
+F1, F5, F6 and F9 reference Google's real SDK. A test environment may block or delay that request. If no Google iframe appears, the correct result is the amber `hasn't rendered` warning, followed by **Re-scan page** after the page has settled. This is not a fixture failure.
+
+The local F1 and F7 links use `q=localhost` so the local host check is deterministic. If you copy a fixture to a public host, update its deeplink to that host before judging the fallback row. For the public `/blog/` advisory, use a public apex or `www` host; localhost remains E5 and will not produce E3.
+
+## Manual Chrome pass
+
+1. Load `preferred-source-checker/` unpacked and check for manifest warnings.
+2. Open each fixture and record the eligibility card, four checklist rows and any fix-it disclosure.
+3. On F1, use **Re-scan page** after the SDK has had time to respond. Test both the rendered and blocked/unrendered paths where possible.
+4. Confirm **Add as preferred on Google** opens one Google preferences tab and stops there. It does not automate the Google page.
+5. Confirm **Copy embed snippet** produces the seven-line template with the current display domain.
+6. Check `chrome.storage.local` in popup DevTools. v1 records audit history locally, one host per UTC day, with no history UI yet.
+
+The automated equivalents and their 33/33 result are in `../preferred-source-checker/tools/run-tests.mjs` and `../BUILD-REPORT.md`.
+
+Source: [Chrome extension repository](https://github.com/OpaceDigitalAgency/preferred-source-checker-for-google-chrome-extension) · [MIT licence](../preferred-source-checker/LICENSE) · [Opace on GitHub](https://github.com/OpaceDigitalAgency)
