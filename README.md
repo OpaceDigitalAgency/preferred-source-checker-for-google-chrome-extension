@@ -1,4 +1,4 @@
-# Add as Preferred Source Button & Popup for Google (SEO & AI Overviews): Chrome Site Checker
+# Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker
 
 ![Add as Preferred Source Button and Popup for Google Chrome Site Checker for SEO and AI Overviews](store-assets/add-as-preferred-source-chrome-marquee-1400x560.png)
 

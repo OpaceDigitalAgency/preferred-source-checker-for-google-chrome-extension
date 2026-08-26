@@ -1,4 +1,4 @@
-# Internal test fixtures: Chrome Site Checker companion
+# Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome test fixtures
 
 These static pages exercise the Chrome Site Checker detector for **Add as Preferred Source Button & Popup for Google (SEO & AI Overviews)**. They are development fixtures, not public product pages. Serve them over HTTP because the extension intentionally treats `file://` as empty state X2.
 

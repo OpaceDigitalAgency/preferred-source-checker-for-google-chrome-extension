@@ -1,4 +1,4 @@
-# Chrome Web Store listing: Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker
+# Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker
 
 This copy is prepared locally for the Chrome Web Store. The extension is built and tested at 33/33, but it has **not been submitted**. Do not describe it as published, live or reviewed until a store submission and listing review are evidenced.
 
