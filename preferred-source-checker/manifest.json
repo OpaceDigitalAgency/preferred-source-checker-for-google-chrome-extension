@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Preferred Source Checker for Google",
-  "short_name": "Preferred Source Checker",
+  "name": "Add as Preferred Source Button & Popup for Google (SEO & AI Overviews)",
+  "short_name": "Chrome Site Checker",
   "version": "1.0.0",
-  "description": "Check any site's Google Preferred Sources eligibility, verify the button is installed correctly, and add it as preferred in one click.",
+  "description": "Audit Preferred Sources eligibility, button setup and fallback links locally. Chrome companion checker.",
   "author": "Opace Digital Agency",
   "homepage_url": "https://opace.agency/add-as-preferred-source-button-for-google/button-checker/",
   "minimum_chrome_version": "116",
@@ -15,7 +15,7 @@
     "128": "icons/icon-128.png"
   },
   "action": {
-    "default_title": "Preferred Source Checker for Google",
+    "default_title": "Chrome Site Checker — Preferred Sources",
     "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "icons/icon-16.png",

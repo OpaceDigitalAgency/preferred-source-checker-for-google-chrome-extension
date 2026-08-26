@@ -1,4 +1,4 @@
-# Build report — Preferred Source Checker for Google (Chrome extension)
+# Build report — Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker
 
 **Built:** 26 August 2026
 **Spec:** `specs/04-chrome-extension-spec.md` v1.0 (sole input)
@@ -65,9 +65,9 @@ Sibling deliverables in `build/chrome-extension/`:
 All run 26 Aug 2026 on Node v24.2.0 (macOS):
 
 1. **Syntax:** `node --check` (module or script mode as appropriate) passes for all 9 JS files: `eligibility.js`, `psl-lite.js`, `strings.js`, `render.js`, `history.js`, `popup.js`, `detector.js`, `detector-inject.js`, `run-tests.mjs`, `generate-icons.cjs`.
-2. **JSON:** `manifest.json` and `_locales/en/messages.json` parse cleanly; manifest matches spec §3.2 field-for-field.
+2. **JSON:** `manifest.json` and `_locales/en/messages.json` parse cleanly; permissions and MV3 structure follow spec §3.2, with the approved family name and ≤132-character local audit description applied.
 3. **Reusability grep (AC31):** `grep 'chrome\.'` over `detector.js`, `eligibility.js`, `psl-lite.js`, `strings.js` → zero matches.
-4. **Node test harness** (`node tools/run-tests.mjs`): **33 passed, 0 failed.** Coverage against the spec's test matrix:
+4. **Node test harness** (`node preferred-source-checker/tools/run-tests.mjs` from this repository root): **33 passed, 0 failed.** Coverage against the spec's test matrix:
    - Eligibility AC1–AC6: www apex → E1, subdomain → E2 (full host), `/blog` → E3, `.co.uk` PSL → `bbc.co.uk`, localhost/IP → E5, `blogging` non-trigger → E1, chrome:///unparseable → E6, plus E4 and PSL-subdomain cases.
    - Detector + derivation AC7–AC13 via fake-DOM equivalents of F1–F6/F9: all row glyphs, verbatim status phrases, chips (`theme: dark`, `lang: en`, `SDK: publisher.js`/`publisher.mjs`), summary keys, generator-link condition; plus mixed-mode, preload-only, deeplink-only, www-q-match and wrong-pathname-anchor cases.
    - History §2.5: same-host-same-UTC-day overwrite, 200-entry cap, CSV header and RFC 4180 quoting.
@@ -93,7 +93,9 @@ Note on the harness: the detector is exercised against fake-DOM constructions eq
 
 - **v1.1 features (per spec §2.5):** history UI, CSV export UI, `Clear history` — storage layer ships in v1 and is recording silently; no UI built, as specified.
 - **F8 subdomain fixture:** requires the fixture set hosted on a real domain with a subdomain (e.g. GitHub Pages); cannot be exercised from localhost.
-- **Designer icon exports** (see Icons TODO) and the five store screenshots / promo tiles — need a live capture session after the visual pass.
+- **Designer icon exports** (see Icons TODO) and the five store screenshots / promo tiles — the approved local artwork and five screenshot captures are now present under `store-assets/`.
+- **Screenshot capture:** a dedicated Chrome for Testing profile loaded the unpacked extension and exercised F1, F2, F4, F5 and F6. The five final PNGs are 1280×800 canvases; the popup pixels remain at their native dimensions on an honest padded frame. Filenames, alt text and captions are recorded in `store-listing.md`.
+- **Required promotional assets:** `preferred-source-checker-small-promo.png` (440×280 PNG), optional `preferred-source-checker-marquee-promo.png` (1400×560 PNG), and the designer-exported `icon-128.png` (128×128 PNG). Use the approved visual evidence brief and inspect each at original size before submission.
 - **Live-Chrome acceptance criteria not runnable in this environment:** AC14 (SDK-blocked re-scan flow), AC16 (300 ms timing), AC17/AC19/AC30 (tab/network observation), AC22 (offline), AC23–AC27 (rendering, contrast measurement, keyboard, screen reader, reduced motion), AC29 (Chrome 116 load). The manual steps above cover them.
-- **Privacy policy hosting** at opace.agency, plus the bracketed release date and privacy contact in it (spec forbids inventing them).
+- **Privacy disclosure:** the verified public policy URL is `https://opace.agency/privacy-policy/` (HTTP 200). The extension-specific disclosure records `26 August 2026` and `info@opace.co.uk`, verified against the public Opace policy.
 - **Essential SEO Toolkit integration (§8):** future work by design; the six reusable files and message contract are ready.

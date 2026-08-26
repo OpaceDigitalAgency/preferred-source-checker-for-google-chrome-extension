@@ -1,19 +1,20 @@
-# Chrome Web Store listing: Preferred Source Checker for Google
+# Chrome Web Store listing: Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker
 
 This copy is prepared locally for the Chrome Web Store. The extension is built and tested at 33/33, but it has **not been submitted**. Do not describe it as published, live or reviewed until a store submission and listing review are evidenced.
 
 ## Listing fields
 
-- **Name:** `Preferred Source Checker for Google`
+- **Name:** `Add as Preferred Source Button & Popup for Google (SEO & AI Overviews)`
+- **Product modifier:** `Chrome Site Checker` (the extension audits the implementation; it does not install the button)
 - **Category:** `Developer Tools`
 - **Language:** `English`
 - **Price:** Free
 - **Website / homepage:** `https://opace.agency/add-as-preferred-source-button-for-google/button-checker/`
 - **Support URL:** `https://opace.agency/add-as-preferred-source-button-for-google/button-checker/`
-- **Privacy policy URL:** `https://opace.agency/add-as-preferred-source-button-for-google/button-checker/privacy/` (must be hosted before submission)
+- **Privacy policy URL:** `https://opace.agency/privacy-policy/` (verified HTTP 200 on 26 August 2026; Opace's canonical public policy)
 - **Release state:** Not submitted
 - **Release date:** Not set. Complete in the dashboard at submission time.
-- **Privacy contact:** Not set. Use Opace's designated privacy address before submission; do not publish a placeholder.
+- **Privacy contact:** `info@opace.co.uk` (verified against Opace's public privacy policy on 26 August 2026).
 
 ## Short description
 
@@ -26,7 +27,7 @@ Free SEO checker for Google Preferred Sources: eligibility, button install and a
 ## Full description
 
 ```text
-Check a Google Preferred Sources implementation from the page you are viewing. This free SEO checker reports eligibility, installation details and practical fixes in one click.
+Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker audits the Google Preferred Sources implementation on the page you are viewing. This free Chrome companion reports eligibility, installation details and practical fixes in one click.
 
 Google's Preferred Sources lets readers choose publications they want to see more of in Top Stories, Discover and AI Overviews. Publishers can provide an official button or a direct preferences link, but an installation still needs checking after it is added.
 
@@ -59,16 +60,18 @@ MORE FROM OPACE
 
 Find the Preferred Sources product hub at https://opace.agency/add-as-preferred-source-button-for-google/ and the online eligibility checker at https://opace.agency/add-as-preferred-source-button-for-google/button-checker/. The button and embed-code generator at https://opace.agency/add-as-preferred-source-button-for-google/button-generator/ supports styled and platform-specific examples. The suite also includes a WordPress plugin repository at https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google-wordpress-plugin and open-source framework packages at https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google.
 
-Built by Opace Digital Agency at https://opace.agency/, a UK agency working from Birmingham and internationally. This independent extension is not affiliated with, endorsed by or sponsored by Google. Google is a trademark of Google LLC.
+Built by Opace Digital Agency at https://opace.agency/, a UK agency working from Birmingham and internationally. This independent extension is not affiliated with, endorsed by or sponsored by Google. Google is a trademark of Google LLC. The listing is a local candidate and has not been submitted to the Chrome Web Store.
 ```
 
 ## Privacy policy text
 
-Host the policy at the privacy URL above, then paste the same text into the dashboard where permitted. Fill both placeholders before submission. Do not invent a date or contact address.
+The public policy URL above is Opace's canonical Privacy & Cookie Policy and currently returns HTTP 200. Paste the extension-specific disclosure below into the dashboard where permitted.
 
 ```text
-Privacy Policy: Preferred Source Checker for Google
-Last updated: [release date]
+Privacy Policy: Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker
+Last updated: 26 August 2026
+
+The public Opace Privacy & Cookie Policy is available at https://opace.agency/privacy-policy/. The extension-specific practices below apply to this Chrome companion.
 
 Preferred Source Checker for Google ("the extension") is published by Opace Ltd,
 a UK digital agency working from Birmingham and internationally (opace.agency).
@@ -101,7 +104,7 @@ clipboardWrite lets Copy embed snippet write to your clipboard.
 Changes: future versions that change these practices will update this policy
 and the Chrome Web Store data-use disclosures before release.
 
-Contact: [privacy contact email], Opace Ltd, United Kingdom.
+Contact: info@opace.co.uk, Opace Ltd, United Kingdom.
 ```
 
 ## Single-purpose justification
@@ -129,24 +132,26 @@ Single purpose: auditing a website's implementation of Google's Preferred Source
 
 ## Screenshot storyboard
 
-Five genuine 1280 x 800 captures are required. They must be taken from the working popup after the Chrome visual pass. Do not submit these directions as images, and do not fabricate states.
+Five genuine 1280 x 800 captures are ready under `store-assets/screenshots/`. Each keeps the native popup pixels unscaled on a padded canvas. Do not submit fabricated states.
 
-1. **Checklist:** a page with a complete implementation checklist. Caption: `Check a Preferred Sources installation from the current tab.`
-2. **Broken install:** SDK present with an unrendered button and expanded fix guidance. Caption: `See the failed check and the next fix.`
-3. **Subdirectory advisory:** a public-domain page under `/blog/` showing the domain-level warning. Caption: `Spot the subdirectory eligibility trap.`
-4. **Add-page link:** the popup beside the newly opened Google preferences page. Caption: `Open Google's page, then complete the add yourself.`
-5. **Copied snippet:** the successful copy state with personalised fallback code visible. Caption: `Copy a ready-to-paste embed and fallback link.`
+1. **Complete checklist:** `preferred-sources-chrome-checker-complete-checklist-1280x800.png`. Alt: `Chrome Site Checker complete Preferred Sources implementation checklist on the auto-mode fixture.` Caption: `Check a Preferred Sources installation from the current tab.`
+2. **Manual mode warning:** `preferred-sources-chrome-checker-manual-mode-warning-1280x800.png`. Alt: `Chrome Site Checker manual-mode result showing no deeplink fallback and a custom trigger note.` Caption: `See the manual trigger guidance and missing fallback.`
+3. **Broken install:** `preferred-sources-chrome-checker-broken-install-fix-1280x800.png`. Alt: `Chrome Site Checker broken-install result showing missing SDK and a wrong-domain fallback warning.` Caption: `See the failed check and the next fix.`
+4. **Hidden button:** `preferred-sources-chrome-checker-hidden-button-warning-1280x800.png`. Alt: `Chrome Site Checker warning that the Preferred Sources button is present but hidden.` Caption: `Spot a button that is present but hidden.`
+5. **Missing async:** `preferred-sources-chrome-checker-sdk-no-async-warning-1280x800.png`. Alt: `Chrome Site Checker warning that publisher.js is loaded without async.` Caption: `Catch an SDK script that is missing async.`
 
 ## Promotional assets
 
-- Small tile: 440 x 280 PNG, using the approved extension icon motif and no fabricated interface.
-- Optional marquee: 1400 x 560 PNG, using a genuine popup capture.
-- Store icon: use the existing `preferred-source-checker/icons/icon-128.png` until designer exports replace it. Inspect the final PNG before submission.
+- Named product logo: `store-assets/preferred-source-checker-logo.png` (512 x 512 PNG).
+- Small tile: `store-assets/add-as-preferred-source-chrome-promo-440x280.png` (440 x 280 PNG).
+- Marquee: `store-assets/add-as-preferred-source-chrome-marquee-1400x560.png` (1400 x 560 PNG).
+- Store icon: `preferred-source-checker/icons/icon-128.png` (128 x 128 PNG). This is the symbol-only small-format export; the named logo appears in the listing artwork and repository.
+- Screenshots: the five genuine 1280 x 800 PNGs listed in the storyboard above.
 
 ## Pre-live checklist
 
-- [ ] Host the privacy policy at the listed canonical checker URL.
-- [ ] Replace the privacy date and contact placeholders with approved values.
+- [ ] Confirm the public privacy policy URL remains available and returns the intended Opace policy.
+- [x] Privacy disclosure date and contact completed from the verified public policy evidence.
 - [ ] Complete a Chrome load-unpacked pass on the current stable Chrome and verify the required manual criteria in `BUILD-REPORT.md`.
 - [ ] Capture five distinct 1280 x 800 screenshots from the real popup. Check text, crop, contrast and privacy.
 - [ ] Prepare the 440 x 280 promotional tile and inspect its dimensions.

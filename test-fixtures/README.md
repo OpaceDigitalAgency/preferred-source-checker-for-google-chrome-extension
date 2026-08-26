@@ -1,6 +1,6 @@
-# Internal test fixtures
+# Internal test fixtures: Chrome Site Checker companion
 
-These static pages exercise the Preferred Source Checker detector. They are development fixtures, not public product pages. Serve them over HTTP because the extension intentionally treats `file://` as empty state X2.
+These static pages exercise the Chrome Site Checker detector for **Add as Preferred Source Button & Popup for Google (SEO & AI Overviews)**. They are development fixtures, not public product pages. Serve them over HTTP because the extension intentionally treats `file://` as empty state X2.
 
 ## Serve locally
 
@@ -42,6 +42,6 @@ The local F1 and F7 links use `q=localhost` so the local host check is determini
 5. Confirm **Copy embed snippet** produces the seven-line template with the current display domain.
 6. Check `chrome.storage.local` in popup DevTools. v1 records audit history locally, one host per UTC day, with no history UI yet.
 
-The automated equivalents and their 33/33 result are in `../preferred-source-checker/tools/run-tests.mjs` and `../BUILD-REPORT.md`.
+The automated equivalents and their 33/33 result are in `../preferred-source-checker/tools/run-tests.mjs` and `../BUILD-REPORT.md`. From the repository root, run `node preferred-source-checker/tools/run-tests.mjs`.
 
 Source: [Chrome extension repository](https://github.com/OpaceDigitalAgency/preferred-source-checker-for-google-chrome-extension) · [MIT licence](../preferred-source-checker/LICENSE) · [Opace on GitHub](https://github.com/OpaceDigitalAgency)

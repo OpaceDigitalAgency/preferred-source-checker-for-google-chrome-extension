@@ -2,6 +2,7 @@
   "name": "preferred-source-checker-dev",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "Dev-only manifest so Node treats lib/*.js as ES modules for tests. MUST NOT be included in the Chrome Web Store zip (spec §3.3).",
   "scripts": {

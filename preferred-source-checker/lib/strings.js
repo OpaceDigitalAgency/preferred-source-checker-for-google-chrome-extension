@@ -24,7 +24,7 @@ export function fmt(template, values) {
 
 export const STRINGS = Object.freeze({
   header: Object.freeze({
-    title: 'Preferred Source Checker for Google'
+    title: 'Chrome Site Checker — Preferred Sources'
   }),
 
   domain: Object.freeze({

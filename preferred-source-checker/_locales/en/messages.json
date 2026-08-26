@@ -1,10 +1,10 @@
 {
   "extName": {
-    "message": "Preferred Source Checker for Google",
+    "message": "Add as Preferred Source Button & Popup for Google (SEO & AI Overviews)",
     "description": "Extension name for the Chrome Web Store listing."
   },
   "extDescription": {
-    "message": "Check any site's Google Preferred Sources eligibility, verify the button is installed correctly, and add it as preferred in one click.",
+    "message": "Audit Preferred Sources eligibility, button setup and fallback links locally. Chrome companion checker.",
     "description": "Extension description for the Chrome Web Store listing."
   }
 }

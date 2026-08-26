@@ -1,6 +1,10 @@
-# Preferred Source Checker for Google
+# Add as Preferred Source Button & Popup for Google (SEO & AI Overviews): Chrome Site Checker
 
-Preferred Source Checker for Google is a Chrome extension for checking a site's Google Preferred Sources setup from the current tab. It classifies domain eligibility, checks the publisher SDK, mode, button element and fallback deeplink, then gives practical fix guidance.
+![Add as Preferred Source Button and Popup for Google Chrome Site Checker for SEO and AI Overviews](store-assets/add-as-preferred-source-chrome-marquee-1400x560.png)
+
+*Audit a Preferred Sources button and popup installation from Chrome without transmitting scan data.*
+
+The Chrome Site Checker is the companion audit surface for **Add as Preferred Source Button & Popup for Google (SEO & AI Overviews)**. It checks a site's Google Preferred Sources setup from the current tab. It classifies domain eligibility, checks the publisher SDK, mode, button element and fallback deeplink, then gives practical fix guidance. It audits locally; it does not install or add the button for you.
 
 **Status:** built and tested: 33/33 automated checks passed on 26 August 2026. The extension has not been submitted to the Chrome Web Store.
 
@@ -17,15 +21,21 @@ The package is Manifest V3 and currently uses `activeTab`, `scripting`, `storage
 
 The scan covers the current page only. Eligibility also depends on Google recognising the site as a source, which the extension cannot verify automatically. The verify link opens Google's source tool for a manual check.
 
+## Screenshots
+
+Five genuine 1280 × 800 captures from the working extension are ready under [`store-assets/screenshots/`](store-assets/screenshots/). Each retains the popup at its native dimensions on an honest padded canvas and shows a distinct fixture state: complete checklist, manual mode with no fallback, broken installation, hidden button and missing async attribute. Filenames, alt text and captions are recorded in [`store-listing.md`](store-listing.md).
+
 ## Privacy and boundaries
 
 The detector reads page markup when you open the popup and does not change the page. Audit metadata is written to `chrome.storage.local` on the device: host, display domain, date, eligibility state, summary and implementation counts. That local history is not transmitted, synced or uploaded, and v1 has no history screen.
 
 The extension does not make background requests or send scan data to a service. When you click **Add as preferred on Google**, it opens Google's source preferences page for the current display domain in a new tab. You complete the add on Google's page; the extension does not click, fill or automate that page. The Verify, generator and Opace links also open only after you choose them. These user-triggered navigations are distinct from silent data transmission.
 
+The public policy link for this Chrome companion is Opace's canonical [Privacy & Cookie Policy](https://opace.agency/privacy-policy/). The extension-specific disclosure, including local storage and user-triggered navigation, is kept in [`store-listing.md`](store-listing.md) for the pending Chrome Web Store submission.
+
 Google's SDK exposes `preferredSource.init({ theme, lang })` and `preferredSource.addPreferredSource()`, but no completion callback, promise or event. The extension can report detected markup and clicks on its own controls, not a confirmed preferred-source addition.
 
-This is an independent Opace tool. It is not affiliated with, endorsed by or sponsored by Google.
+This is an independent Opace tool. It is not affiliated with, endorsed by or sponsored by Google. The Chrome Web Store listing is a local candidate and has not been submitted.
 
 ## Install and run a check
 
