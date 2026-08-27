@@ -14,16 +14,16 @@ Open `http://localhost:8000/f1-auto-mode.html`, load the parent `preferred-sourc
 
 ## Fixture matrix
 
-| File | Spec case | Expected detector coverage |
-| --- | --- | --- |
-| `f1-auto-mode.html` | F1 | Async `publisher.js`, automatic mode, themed button, rendered iframe when Google's SDK responds, matching `q=localhost` deeplink. |
-| `f2-manual-mode.html` | F2 | Manual mode, inline `PREFERRED_SOURCE` queue, custom trigger and no deeplink. |
-| `f3-empty.html` | F3 | No SDK, button or deeplink. Exercises the not-implemented summary and fix rows. |
-| `f4-broken-install.html` | F4 | Button without SDK and a deeplink whose `q` points to `other-domain.com`. |
-| `f5-hidden-button.html` | F5 | Async SDK with a `display:none` button element. |
-| `f6-no-async.html` | F6 | SDK script without `async`. |
-| `blog/sample-post/index.html` | F7 | F1-shaped content under `/blog/`, for the subdirectory advisory on a public host. |
-| `f9-mjs.html` | F9 | Async `publisher.mjs` module script. |
+| File                          | Spec case | Expected detector coverage                                                                                                        |
+| ----------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `f1-auto-mode.html`           | F1        | Async `publisher.js`, automatic mode, themed button, rendered iframe when Google's SDK responds, matching `q=localhost` deeplink. |
+| `f2-manual-mode.html`         | F2        | Manual mode, inline `PREFERRED_SOURCE` queue, custom trigger and no deeplink.                                                     |
+| `f3-empty.html`               | F3        | No SDK, button or deeplink. Exercises the not-implemented summary and fix rows.                                                   |
+| `f4-broken-install.html`      | F4        | Button without SDK and a deeplink whose `q` points to `other-domain.com`.                                                         |
+| `f5-hidden-button.html`       | F5        | Async SDK with a `display:none` button element.                                                                                   |
+| `f6-no-async.html`            | F6        | SDK script without `async`.                                                                                                       |
+| `blog/sample-post/index.html` | F7        | F1-shaped content under `/blog/`, for the subdirectory advisory on a public host.                                                 |
+| `f9-mjs.html`                 | F9        | Async `publisher.mjs` module script.                                                                                              |
 
 F8 is deliberately not a local file: it needs F1 content on a real subdomain. Host a separate test copy on a controlled public domain before testing E2. Do not treat a localhost result as evidence of public-domain eligibility.
 
@@ -44,4 +44,4 @@ The local F1 and F7 links use `q=localhost` so the local host check is determini
 
 The automated equivalents and their 33/33 result are in `../preferred-source-checker/tools/run-tests.mjs` and `../BUILD-REPORT.md`. From the repository root, run `node preferred-source-checker/tools/run-tests.mjs`.
 
-Source: [Chrome extension repository](https://github.com/OpaceDigitalAgency/preferred-source-checker-for-google-chrome-extension) · [MIT licence](../preferred-source-checker/LICENSE) · [Opace on GitHub](https://github.com/OpaceDigitalAgency)
+Source: [Chrome extension repository](https://github.com/OpaceDigitalAgency/preferred-source-checker-for-google-chrome-extension) · [Preferred Sources product hub](https://opace.agency/add-as-preferred-source-button-for-google/) · [Opace SEO services](https://opace.agency/services/seo/) · [MIT licence](../preferred-source-checker/LICENSE) · [Opace on GitHub](https://github.com/OpaceDigitalAgency)

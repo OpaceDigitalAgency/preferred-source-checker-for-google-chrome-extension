@@ -60,7 +60,7 @@ MORE FROM OPACE
 
 Find the Preferred Sources product hub at https://opace.agency/add-as-preferred-source-button-for-google/ and the online eligibility checker at https://opace.agency/add-as-preferred-source-button-for-google/button-checker/. The button and embed-code generator at https://opace.agency/add-as-preferred-source-button-for-google/button-generator/ supports styled and platform-specific examples. The suite also includes a WordPress plugin repository at https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google-wordpress-plugin and open-source framework packages at https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google.
 
-Built by Opace Digital Agency at https://opace.agency/, a UK agency working from Birmingham and internationally. This independent extension is not affiliated with, endorsed by or sponsored by Google. Google is a trademark of Google LLC. The listing is a local candidate and has not been submitted to the Chrome Web Store.
+Built by Opace Digital Agency at https://opace.agency/, a UK agency working from Birmingham and internationally. Explore Opace SEO services at https://opace.agency/services/seo/. This independent extension is not affiliated with, endorsed by or sponsored by Google. Google is a trademark of Google LLC. The listing is a local candidate and has not been submitted to the Chrome Web Store.
 ```
 
 ## Privacy policy text
@@ -115,12 +115,12 @@ Single purpose: auditing a website's implementation of Google's Preferred Source
 
 ## Permission justifications
 
-| Permission | Justification |
-| --- | --- |
-| `activeTab` | Reads the current tab's URL for eligibility and permits one-off script injection when the user opens the popup. Access is limited to the tab where the user invokes the extension. |
-| `scripting` | Injects a small, read-only detector into the current page to inspect Google's SDK script, button elements and fallback links. There is no persistent content script and the page is not modified. |
-| `storage` | Stores the user's own audit history locally in `chrome.storage.local`. The history is not transmitted, synced or uploaded. |
-| `clipboardWrite` | Lets **Copy embed snippet** place the HTML embed code on the clipboard after the user clicks it. |
+| Permission       | Justification                                                                                                                                                                                     |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `activeTab`      | Reads the current tab's URL for eligibility and permits one-off script injection when the user opens the popup. Access is limited to the tab where the user invokes the extension.                |
+| `scripting`      | Injects a small, read-only detector into the current page to inspect Google's SDK script, button elements and fallback links. There is no persistent content script and the page is not modified. |
+| `storage`        | Stores the user's own audit history locally in `chrome.storage.local`. The history is not transmitted, synced or uploaded.                                                                        |
+| `clipboardWrite` | Lets **Copy embed snippet** place the HTML embed code on the clipboard after the user clicks it.                                                                                                  |
 
 ## Data-use disclosures
 
