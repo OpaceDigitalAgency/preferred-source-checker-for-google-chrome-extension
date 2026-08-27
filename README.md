@@ -23,7 +23,37 @@ The scan covers the current page only. Eligibility also depends on Google recogn
 
 ## Screenshots
 
-Five genuine 1280 × 800 captures from the working extension are ready under [`store-assets/screenshots/`](store-assets/screenshots/). Each retains the popup at its native dimensions on an honest padded canvas and shows a distinct fixture state: complete checklist, manual mode with no fallback, broken installation, hidden button and missing async attribute. Filenames, alt text and captions are recorded in [`store-listing.md`](store-listing.md).
+Five genuine 1280 × 800 captures from the working extension are embedded below and available under [`store-assets/screenshots/`](store-assets/screenshots/). Each retains the popup at its native dimensions on an honest padded canvas and shows a distinct fixture state: complete checklist, manual mode with no fallback, broken installation, hidden button and missing async attribute. The matching store storyboard, filenames, alt text and captions are recorded in [`store-listing.md`](store-listing.md).
+
+### Complete checklist
+
+![Chrome Site Checker complete Preferred Sources implementation checklist on the auto-mode fixture.](store-assets/screenshots/preferred-sources-chrome-checker-complete-checklist-1280x800.png)
+
+_Check a Preferred Sources installation from the current tab._
+
+### Manual mode warning
+
+![Chrome Site Checker manual-mode result showing no deeplink fallback and a custom trigger note.](store-assets/screenshots/preferred-sources-chrome-checker-manual-mode-warning-1280x800.png)
+
+_See the manual trigger guidance and missing fallback._
+
+### Broken installation
+
+![Chrome Site Checker broken-install result showing missing SDK and a wrong-domain fallback warning.](store-assets/screenshots/preferred-sources-chrome-checker-broken-install-fix-1280x800.png)
+
+_See the failed check and the next fix._
+
+### Hidden button warning
+
+![Chrome Site Checker warning that the Preferred Sources button is present but hidden.](store-assets/screenshots/preferred-sources-chrome-checker-hidden-button-warning-1280x800.png)
+
+_Spot a button that is present but hidden._
+
+### Missing async warning
+
+![Chrome Site Checker warning that publisher.js is loaded without async.](store-assets/screenshots/preferred-sources-chrome-checker-sdk-no-async-warning-1280x800.png)
+
+_Catch an SDK script that is missing async._
 
 ## Privacy and boundaries
 

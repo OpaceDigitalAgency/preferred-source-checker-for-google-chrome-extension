@@ -150,12 +150,12 @@ Five genuine 1280 x 800 captures are ready under `store-assets/screenshots/`. Ea
 
 ## Pre-live checklist
 
-- [ ] Confirm the public privacy policy URL remains available and returns the intended Opace policy.
+- [x] Confirm the public privacy policy URL remains available and returns the intended Opace policy.
 - [x] Privacy disclosure date and contact completed from the verified public policy evidence.
 - [ ] Complete a Chrome load-unpacked pass on the current stable Chrome and verify the required manual criteria in `BUILD-REPORT.md`.
-- [ ] Capture five distinct 1280 x 800 screenshots from the real popup. Check text, crop, contrast and privacy.
-- [ ] Prepare the 440 x 280 promotional tile and inspect its dimensions.
-- [ ] Confirm the manifest, permissions, package version and privacy answers match the submitted ZIP.
+- [x] Capture five distinct 1280 x 800 screenshots from the real popup. Check text, crop, contrast and privacy.
+- [x] Prepare the 440 x 280 promotional tile and inspect its dimensions.
+- [x] Confirm the manifest, permissions, package version and privacy answers match the held upload ZIP.
 - [ ] Submit only after the owner approves the listing, assets and privacy contact.
 
 ## Canonical links
