@@ -1,6 +1,7 @@
 # Build report — Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker
 
 **Built:** 26 August 2026
+**Release state updated:** 28 August 2026
 **Spec:** `specs/04-chrome-extension-spec.md` v1.0 (sole input)
 **Output:** `build/chrome-extension/preferred-source-checker/` (loadable unpacked as-is)
 
@@ -55,6 +56,15 @@ Sibling deliverables in `build/chrome-extension/`:
 - Relabelled the first store frame as a localhost fixture audit. It no longer implies a complete public-domain/deeplink pass that the genuine capture does not show.
 - Removed the review-state sentence from the public store description while preserving the internal not-submitted status outside the copy block.
 
+## Chrome Web Store draft — 28 August 2026
+
+- Confirmed the signed-in publisher as **Opace Digital Agency** and kept the existing Essential SEO Toolkit item unchanged.
+- Created a separate draft for this extension: item ID `dnifhlampnjpfigeniaoihblbdegijgp` under publisher account `4a1d0b88-3c43-484f-90ed-cb4156de16bb`.
+- Uploaded the exact 44,003-byte v1.0.0 ZIP and saved the complete listing: Developer Tools category, full description, homepage, support URL, 128 px icon, five localised 1280 x 800 screenshots, 440 x 280 small tile and 1400 x 560 marquee tile.
+- Saved the privacy declarations, four permission justifications, no-remote-code answer, privacy-policy URL, public/all-regions distribution and reviewer instructions. No user-data collection categories are selected.
+- Left the three developer-policy certifications unchecked and **Submit for review** untouched for David. The dashboard confirmed that certification is the only remaining submission blocker.
+- Loaded the unpacked build in stable Chrome and smoke-tested the F1 local fixture and F4 broken-install fixture. F1 reported the expected localhost eligibility limit while detecting the SDK, auto mode and rendered button; F4 correctly reported the missing SDK and wrong-domain deeplink.
+
 ## Design decisions within spec latitude
 
 - **Detector `qMatchesSite`:** the detector is chrome-free and PSL-free, so it compares the deeplink `q` (lowercased, `www.` stripped) against the page host and the host minus `www.` — equivalent to "displayDomain or full host" for every case the spec enumerates.
@@ -65,7 +75,7 @@ Sibling deliverables in `build/chrome-extension/`:
 
 `icons/icon-*.png` are real, working PNGs rasterised by `tools/generate-icons.cjs` (pure Node + zlib, 4×4 supersampling) from the motif in `assets/icon.svg`: rounded-square Opace blue `#0b57d0`, white star, small magnifier lower-right; star-only at 16 px, flat, no gradients — per spec §5.6. The extension loads unpacked with them today.
 
-**TODO before store submission:** replace the programmatic renders with designer exports of `assets/icon.svg` at 16/32/48/128 (file-for-file swap; same filenames). The current renders are geometrically correct but un-art-directed.
+The current generated exports are valid, dimension-checked, packaged and used in the saved store draft. A future designer refresh can replace them file-for-file, but it is not a functional or submission blocker.
 
 ## Verification results
 
@@ -100,9 +110,9 @@ Note on the harness: the detector is exercised against fake-DOM constructions eq
 
 - **v1.1 features (per spec §2.5):** history UI, CSV export UI, `Clear history` — storage layer ships in v1 and is recording silently; no UI built, as specified.
 - **F8 subdomain fixture:** requires the fixture set hosted on a real domain with a subdomain (e.g. GitHub Pages); cannot be exercised from localhost.
-- **Designer icon exports** (see Icons TODO) and the five store screenshots / promo tiles — the approved local artwork and five screenshot captures are now present under `store-assets/`.
+- **Optional designer icon refresh:** the current valid exports ship in the ZIP and draft; a later art-directed file-for-file replacement is cosmetic rather than required for v1.0.0.
 - **Screenshot capture:** a dedicated Chrome for Testing profile loaded the unpacked extension and exercised F1, F2, F4, F5 and F6. The five final PNGs are 1280×800 canvases; the popup pixels remain at their native dimensions on an honest padded frame. Filenames, alt text and captions are recorded in `store-listing.md`.
-- **Promotional assets:** the reviewed files are present and dimension-checked under `store-assets/`: `add-as-preferred-source-chrome-promo-440x280.png` (440×280 PNG), `add-as-preferred-source-chrome-marquee-1400x560.png` (1400×560 PNG), `preferred-source-checker-logo.png` (512×512 PNG) and `add-as-preferred-source-chrome-icon-128.png` (128×128 PNG). Inspect each at original size again before submission.
-- **Live-Chrome acceptance criteria not runnable in this environment:** AC14 (SDK-blocked re-scan flow), AC16 (300 ms timing), AC17/AC19/AC30 (tab/network observation), AC22 (offline), AC23–AC27 (rendering, contrast measurement, keyboard, screen reader, reduced motion), AC29 (Chrome 116 load). The manual steps above cover them.
+- **Promotional assets:** the reviewed and uploaded files are dimension-checked under `store-assets/`: `add-as-preferred-source-chrome-promo-440x280.png` (440×280 PNG), `add-as-preferred-source-chrome-marquee-1400x560.png` (1400×560 PNG), `preferred-source-checker-logo.png` (512×512 PNG) and `add-as-preferred-source-chrome-icon-128.png` (128×128 PNG).
+- **Remaining extended manual matrix:** the stable-Chrome F1/F4 smoke pass is complete. AC14 (SDK-blocked re-scan flow), AC16 (300 ms timing), AC17/AC19/AC30 (tab/network observation), AC22 (offline), AC23–AC27 (full rendering, contrast, keyboard, screen-reader and reduced-motion sweep) and a Chrome 116-specific pass remain useful post-draft QA rather than evidence supplied by the Node harness.
 - **Privacy disclosure:** the verified public policy URL is `https://opace.agency/privacy-policy/` (HTTP 200). The extension-specific disclosure records `26 August 2026` and `info@opace.co.uk`, verified against the public Opace policy.
 - **Essential SEO Toolkit integration (§8):** future work by design; the six reusable files and message contract are ready.

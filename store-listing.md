@@ -1,6 +1,6 @@
 # Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker
 
-This copy is prepared locally for the Chrome Web Store. The extension is built and tested at 33/33, but it has **not been submitted**. Do not describe it as published, live or reviewed until a store submission and listing review are evidenced.
+This copy is saved in a separate Chrome Web Store draft for Opace Digital Agency. The extension is built and tested at 33/33, but it has **not been submitted for review**. Do not describe it as published, live or reviewed until the store records those states.
 
 ## Listing fields
 
@@ -12,7 +12,10 @@ This copy is prepared locally for the Chrome Web Store. The extension is built a
 - **Website / homepage:** `https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/`
 - **Support URL:** `https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/`
 - **Privacy policy URL:** `https://opace.agency/privacy-policy/` (verified HTTP 200 on 26 August 2026; Opace's canonical public policy)
-- **Release state:** Not submitted
+- **Draft item ID:** `dnifhlampnjpfigeniaoihblbdegijgp`
+- **Draft URL:** `https://chrome.google.com/u/4/webstore/devconsole/4a1d0b88-3c43-484f-90ed-cb4156de16bb/dnifhlampnjpfigeniaoihblbdegijgp/edit`
+- **Publisher:** Opace Digital Agency
+- **Release state:** Draft saved; owner certifications and Submit for review remain
 - **Release date:** Not set. Complete in the dashboard at submission time.
 - **Privacy contact:** `info@opace.co.uk` (verified against Opace's public privacy policy on 26 August 2026).
 
@@ -136,6 +139,8 @@ Single purpose: auditing a website's implementation of Google's Preferred Source
 - **Automated Google actions:** None. The Add action opens Google's page and the user completes the add there.
 - **Developer Programme Policies:** certify only in the dashboard at submission time.
 
+The three developer-policy certifications are intentionally unchecked in the saved draft. David must read and certify them, save the draft and decide whether to click **Submit for review**.
+
 ## Screenshot storyboard
 
 Five genuine 1280 x 800 captures are ready under `store-assets/screenshots/`. Each shows the real extension against its matching local fixture and is tightly framed for legibility. Do not submit fabricated states.
@@ -158,11 +163,12 @@ Five genuine 1280 x 800 captures are ready under `store-assets/screenshots/`. Ea
 
 - [x] Confirm the public privacy policy URL remains available and returns the intended Opace policy.
 - [x] Privacy disclosure date and contact completed from the verified public policy evidence.
-- [ ] Complete a Chrome load-unpacked pass on the current stable Chrome and verify the required manual criteria in `BUILD-REPORT.md`.
+- [x] Load the unpacked build in stable Chrome and smoke-test the F1 local audit and F4 broken-install states.
 - [x] Capture five distinct 1280 x 800 screenshots from the real popup. Check text, crop, contrast and privacy.
 - [x] Prepare the 440 x 280 promotional tile and inspect its dimensions.
 - [x] Confirm the manifest, permissions, package version and privacy answers match the held upload ZIP.
-- [ ] Submit only after the owner approves the listing, assets and privacy contact.
+- [x] Save the listing, assets, privacy, distribution and reviewer instructions in a separate Opace Digital Agency draft.
+- [ ] David reads and ticks the three developer-policy certifications, saves the draft and decides whether to click Submit for review.
 
 ## Canonical links
 
