@@ -2,13 +2,21 @@
 
 ![Add as Preferred Source Button and Popup for Google Chrome Site Checker for SEO and AI Overviews](store-assets/add-as-preferred-source-chrome-marquee-1400x560.png)
 
-*Audit a Preferred Sources button and popup installation from Chrome without transmitting scan data.*
+*Audit a Preferred Sources button and popup implementation from Chrome without transmitting scan data.*
 
-The Chrome Site Checker is the companion audit surface for **Add as Preferred Source Button & Popup for Google (SEO & AI Overviews)**. It checks a site's Google Preferred Sources setup from the current tab. It classifies domain eligibility, checks the publisher SDK, mode, button element and fallback deeplink, then gives practical fix guidance. It audits locally; it does not install or add the button for you.
+The Chrome Site Checker is the companion audit surface for **Add as Preferred Source Button & Popup for Google (SEO & AI Overviews)**. It checks a site's Google Preferred Sources implementation from the current tab. It classifies domain eligibility, checks the publisher SDK, mode, button element and fallback deeplink, then gives practical fix guidance. It audits locally; it does not install or add the button for you.
 
 **Status:** built and tested: 33/33 automated checks passed on 26 August 2026. The extension has not been submitted to the Chrome Web Store.
 
 The package is Manifest V3 and currently uses `activeTab`, `scripting`, `storage` and `clipboardWrite`. There is no background worker, persistent content script, remote code or analytics service.
+
+## Why Preferred Sources matters for SEO and AI answers
+
+Preferred Sources lets an individual Google user choose publications they want to see more often. Google says fresh and relevant content from a selected source is more likely to appear in that reader's **Top Stories** and may be marked as preferred in **AI Mode** and **AI Overviews**. Google has also reported that users who select a source are about twice as likely to click through to it.
+
+The implementation is therefore worth checking, but it is not a general ranking shortcut. A button does not guarantee visibility, traffic, inclusion or an AI citation; it gives an already-engaged reader an easier way to express a preference which Google can use for that reader's results.
+
+[Google's publisher guidance](https://developers.google.com/search/docs/appearance/preferred-sources) · [Google's click-through finding](https://blog.google/products-and-platforms/products/search/preferred-sources-language-expansion/) · [Preferred Sources product hub](https://opace.agency/add-as-preferred-source-button-for-google/)
 
 ## What it checks
 
@@ -23,35 +31,35 @@ The scan covers the current page only. Eligibility also depends on Google recogn
 
 ## Screenshots
 
-Five genuine 1280 × 800 captures from the working extension are embedded below and available under [`store-assets/screenshots/`](store-assets/screenshots/). Each retains the popup at its native dimensions on an honest padded canvas and shows a distinct fixture state: complete checklist, manual mode with no fallback, broken installation, hidden button and missing async attribute. The matching store storyboard, filenames, alt text and captions are recorded in [`store-listing.md`](store-listing.md).
+Five genuine captures from the working extension are embedded below and available under [`store-assets/screenshots/`](store-assets/screenshots/). Each focuses on a distinct fixture state: localhost implementation audit, manual mode with no fallback, broken installation, hidden button and missing async attribute. The matching store storyboard, filenames, alt text and captions are recorded in [`store-listing.md`](store-listing.md).
 
-### Complete checklist
+### Local fixture audit
 
-![Chrome Site Checker complete Preferred Sources implementation checklist on the auto-mode fixture.](store-assets/screenshots/preferred-sources-chrome-checker-complete-checklist-1280x800.png)
+![Chrome Site Checker on a localhost fixture showing a rendered SDK button alongside local-domain and deeplink limitations.](store-assets/screenshots/preferred-sources-chrome-checker-local-fixture-audit-framed-1280x800.png)
 
-_Check a Preferred Sources installation from the current tab._
+_Test implementation details locally while keeping localhost eligibility and deeplink limits explicit._
 
 ### Manual mode warning
 
-![Chrome Site Checker manual-mode result showing no deeplink fallback and a custom trigger note.](store-assets/screenshots/preferred-sources-chrome-checker-manual-mode-warning-1280x800.png)
+![Chrome Site Checker manual-mode result showing no deeplink fallback and a custom trigger note.](store-assets/screenshots/preferred-sources-chrome-checker-manual-mode-warning-framed-1280x800.png)
 
 _See the manual trigger guidance and missing fallback._
 
 ### Broken installation
 
-![Chrome Site Checker broken-install result showing missing SDK and a wrong-domain fallback warning.](store-assets/screenshots/preferred-sources-chrome-checker-broken-install-fix-1280x800.png)
+![Chrome Site Checker broken-install result showing missing SDK and a wrong-domain fallback warning.](store-assets/screenshots/preferred-sources-chrome-checker-broken-install-fix-framed-1280x800.png)
 
 _See the failed check and the next fix._
 
 ### Hidden button warning
 
-![Chrome Site Checker warning that the Preferred Sources button is present but hidden.](store-assets/screenshots/preferred-sources-chrome-checker-hidden-button-warning-1280x800.png)
+![Chrome Site Checker warning that the Preferred Sources button is present but hidden.](store-assets/screenshots/preferred-sources-chrome-checker-hidden-button-warning-framed-1280x800.png)
 
 _Spot a button that is present but hidden._
 
 ### Missing async warning
 
-![Chrome Site Checker warning that publisher.js is loaded without async.](store-assets/screenshots/preferred-sources-chrome-checker-sdk-no-async-warning-1280x800.png)
+![Chrome Site Checker warning that publisher.js is loaded without async.](store-assets/screenshots/preferred-sources-chrome-checker-sdk-no-async-warning-framed-1280x800.png)
 
 _Catch an SDK script that is missing async._
 
@@ -91,7 +99,7 @@ The reusable modules in `preferred-source-checker/lib/` are dependency-free and 
 ## Links
 
 - [Preferred Sources product hub](https://opace.agency/add-as-preferred-source-button-for-google/)
-- [Online eligibility checker](https://opace.agency/add-as-preferred-source-button-for-google/button-checker/)
+- [Online eligibility checker](https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/)
 - [Button and embed-code generator](https://opace.agency/add-as-preferred-source-button-for-google/button-generator/)
 - [Live framework component demo](https://opacedigitalagency.github.io/add-as-preferred-source-button-for-google/)
 - [Preferred Sources WordPress plugin repository](https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google-wordpress-plugin)
@@ -102,6 +110,6 @@ The reusable modules in `preferred-source-checker/lib/` are dependency-free and 
 
 ## Support, contribution and licence
 
-For product guidance, start with the [online eligibility checker](https://opace.agency/add-as-preferred-source-button-for-google/button-checker/). Code issues and proposed changes belong in the [Chrome extension repository](https://github.com/OpaceDigitalAgency/preferred-source-checker-for-google-chrome-extension). Keep detector changes aligned with [Google's Preferred Sources documentation](https://developers.google.com/search/docs/appearance/preferred-sources) and the extension specification.
+For product guidance, start with the [online eligibility checker](https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/). Code issues and proposed changes belong in the [Chrome extension repository](https://github.com/OpaceDigitalAgency/preferred-source-checker-for-google-chrome-extension). Keep detector changes aligned with [Google's Preferred Sources documentation](https://developers.google.com/search/docs/appearance/preferred-sources) and the extension specification.
 
 The extension and reusable modules are released under the [MIT licence](preferred-source-checker/LICENSE).

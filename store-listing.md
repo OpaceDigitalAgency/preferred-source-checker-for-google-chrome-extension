@@ -9,8 +9,8 @@ This copy is prepared locally for the Chrome Web Store. The extension is built a
 - **Category:** `Developer Tools`
 - **Language:** `English`
 - **Price:** Free
-- **Website / homepage:** `https://opace.agency/add-as-preferred-source-button-for-google/button-checker/`
-- **Support URL:** `https://opace.agency/add-as-preferred-source-button-for-google/button-checker/`
+- **Website / homepage:** `https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/`
+- **Support URL:** `https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/`
 - **Privacy policy URL:** `https://opace.agency/privacy-policy/` (verified HTTP 200 on 26 August 2026; Opace's canonical public policy)
 - **Release state:** Not submitted
 - **Release date:** Not set. Complete in the dashboard at submission time.
@@ -21,15 +21,17 @@ This copy is prepared locally for the Chrome Web Store. The extension is built a
 Maximum 132 characters:
 
 ```text
-Free SEO checker for Google Preferred Sources: eligibility, button install and a link to Google's add page. Runs locally.
+Free SEO checker for Google Preferred Sources: eligibility, button implementation and a link to Google's add page. Runs locally.
 ```
 
 ## Full description
 
 ```text
-Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker audits the Google Preferred Sources implementation on the page you are viewing. This free Chrome companion reports eligibility, installation details and practical fixes in one click.
+Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker audits the Google Preferred Sources implementation on the page you are viewing. This free Chrome companion reports domain eligibility, SDK and button setup, fallback-link health and practical fixes in one click.
 
-Google's Preferred Sources lets readers choose publications they want to see more of in Top Stories, Discover and AI Overviews. Publishers can provide an official button or a direct preferences link, but an installation still needs checking after it is added.
+Google's Preferred Sources lets readers choose publications they want to see more of. Google says fresh and relevant content from a selected source is more likely to appear in that reader's Top Stories and may receive a Preferred Sources badge in AI Mode and AI Overviews. Google has reported that people who select a source are about twice as likely to click through to it.
+
+This is a reader-level preference, not a site-wide ranking factor or a guarantee of rankings, traffic, inclusion or AI citations. Publishers can provide Google's official popup button or a direct preferences link, but the implementation still needs checking after it is added.
 
 WHAT IT DOES
 
@@ -50,6 +52,10 @@ WHO IT IS FOR
 
 SEO consultants checking Preferred Sources readiness, agencies reviewing client deployments, and publishers verifying an embed after installation.
 
+WHY CHECKING MATTERS
+
+A missing async attribute, hidden button, mismatched fallback domain or subdirectory assumption can leave a publisher with an implementation that looks complete but does not provide the intended reader journey. The checker turns those technical details into a short checklist and specific next actions. It does not estimate rankings or claim that Google has accepted the site.
+
 LOCAL-FIRST PRIVACY
 
 The page scan runs in the browser and does not modify the page. The extension stores audit metadata in chrome.storage.local for the user's device. It does not transmit, sync or upload that history, and there is no analytics service.
@@ -58,9 +64,9 @@ The extension does not make background requests or fetch scan data to a service.
 
 MORE FROM OPACE
 
-Find the Preferred Sources product hub at https://opace.agency/add-as-preferred-source-button-for-google/ and the online eligibility checker at https://opace.agency/add-as-preferred-source-button-for-google/button-checker/. The button and embed-code generator at https://opace.agency/add-as-preferred-source-button-for-google/button-generator/ supports styled and platform-specific examples. The suite also includes a WordPress plugin repository at https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google-wordpress-plugin and open-source framework packages at https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google.
+Find the Preferred Sources product hub at https://opace.agency/add-as-preferred-source-button-for-google/ and the online eligibility checker at https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/. The button and embed-code generator at https://opace.agency/add-as-preferred-source-button-for-google/button-generator/ supports styled and platform-specific examples. The suite also includes a WordPress plugin repository at https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google-wordpress-plugin and open-source framework packages at https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google.
 
-Built by Opace Digital Agency at https://opace.agency/, a UK agency working from Birmingham and internationally. Explore Opace SEO services at https://opace.agency/services/seo/. This independent extension is not affiliated with, endorsed by or sponsored by Google. Google is a trademark of Google LLC. The listing is a local candidate and has not been submitted to the Chrome Web Store.
+Built by Opace Digital Agency at https://opace.agency/, a UK agency working from Birmingham and internationally. Explore Opace SEO services at https://opace.agency/services/seo/. This independent extension is not affiliated with, endorsed by or sponsored by Google. Google is a trademark of Google LLC.
 ```
 
 ## Privacy policy text
@@ -132,13 +138,13 @@ Single purpose: auditing a website's implementation of Google's Preferred Source
 
 ## Screenshot storyboard
 
-Five genuine 1280 x 800 captures are ready under `store-assets/screenshots/`. Each keeps the native popup pixels unscaled on a padded canvas. Do not submit fabricated states.
+Five genuine 1280 x 800 captures are ready under `store-assets/screenshots/`. Each shows the real extension against its matching local fixture and is tightly framed for legibility. Do not submit fabricated states.
 
-1. **Complete checklist:** `preferred-sources-chrome-checker-complete-checklist-1280x800.png`. Alt: `Chrome Site Checker complete Preferred Sources implementation checklist on the auto-mode fixture.` Caption: `Check a Preferred Sources installation from the current tab.`
-2. **Manual mode warning:** `preferred-sources-chrome-checker-manual-mode-warning-1280x800.png`. Alt: `Chrome Site Checker manual-mode result showing no deeplink fallback and a custom trigger note.` Caption: `See the manual trigger guidance and missing fallback.`
-3. **Broken install:** `preferred-sources-chrome-checker-broken-install-fix-1280x800.png`. Alt: `Chrome Site Checker broken-install result showing missing SDK and a wrong-domain fallback warning.` Caption: `See the failed check and the next fix.`
-4. **Hidden button:** `preferred-sources-chrome-checker-hidden-button-warning-1280x800.png`. Alt: `Chrome Site Checker warning that the Preferred Sources button is present but hidden.` Caption: `Spot a button that is present but hidden.`
-5. **Missing async:** `preferred-sources-chrome-checker-sdk-no-async-warning-1280x800.png`. Alt: `Chrome Site Checker warning that publisher.js is loaded without async.` Caption: `Catch an SDK script that is missing async.`
+1. **Local fixture audit:** `preferred-sources-chrome-checker-local-fixture-audit-framed-1280x800.png`. Alt: `Chrome Site Checker on a localhost fixture showing a rendered SDK button alongside local-domain and deeplink limitations.` Caption: `Test implementation details locally while keeping localhost eligibility and deeplink limits explicit.`
+2. **Manual mode warning:** `preferred-sources-chrome-checker-manual-mode-warning-framed-1280x800.png`. Alt: `Chrome Site Checker manual-mode result showing no deeplink fallback and a custom trigger note.` Caption: `See the manual trigger guidance and missing fallback.`
+3. **Broken install:** `preferred-sources-chrome-checker-broken-install-fix-framed-1280x800.png`. Alt: `Chrome Site Checker broken-install result showing missing SDK and a wrong-domain fallback warning.` Caption: `See the failed check and the next fix.`
+4. **Hidden button:** `preferred-sources-chrome-checker-hidden-button-warning-framed-1280x800.png`. Alt: `Chrome Site Checker warning that the Preferred Sources button is present but hidden.` Caption: `Spot a button that is present but hidden.`
+5. **Missing async:** `preferred-sources-chrome-checker-sdk-no-async-warning-framed-1280x800.png`. Alt: `Chrome Site Checker warning that publisher.js is loaded without async.` Caption: `Catch an SDK script that is missing async.`
 
 ## Promotional assets
 
@@ -161,7 +167,7 @@ Five genuine 1280 x 800 captures are ready under `store-assets/screenshots/`. Ea
 ## Canonical links
 
 - [Preferred Sources product hub](https://opace.agency/add-as-preferred-source-button-for-google/)
-- [Online eligibility checker](https://opace.agency/add-as-preferred-source-button-for-google/button-checker/)
+- [Online eligibility checker](https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/)
 - [Button and embed-code generator](https://opace.agency/add-as-preferred-source-button-for-google/button-generator/)
 - [Opace SEO services](https://opace.agency/services/seo/)
 - [Opace Digital Agency](https://opace.agency/)

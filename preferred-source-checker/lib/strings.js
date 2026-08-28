@@ -12,7 +12,7 @@ export const PSC_MODULE_VERSION = '1.0.0';
 export const URLS = Object.freeze({
   deeplinkBase: 'https://www.google.com/preferences/source?q=',
   generator: 'https://opace.agency/add-as-preferred-source-button-for-google/button-generator/?utm_source=chrome-extension&utm_medium=extension&utm_campaign=psc',
-  homepage: 'https://opace.agency/add-as-preferred-source-button-for-google/button-checker/?utm_source=chrome-extension&utm_medium=extension&utm_campaign=psc'
+  homepage: 'https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/?utm_source=chrome-extension&utm_medium=extension&utm_campaign=psc'
 });
 
 /** Substitute {token} placeholders in a template string. */

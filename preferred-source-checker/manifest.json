@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "description": "Audit Preferred Sources eligibility, button setup and fallback links locally. Chrome companion checker.",
   "author": "Opace Digital Agency",
-  "homepage_url": "https://opace.agency/add-as-preferred-source-button-for-google/button-checker/",
+  "homepage_url": "https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/",
   "minimum_chrome_version": "116",
   "default_locale": "en",
   "icons": {

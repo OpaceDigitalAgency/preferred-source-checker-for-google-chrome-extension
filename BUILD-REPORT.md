@@ -48,6 +48,13 @@ Sibling deliverables in `build/chrome-extension/`:
 - `store-listing.md` — final store name, short/full description, category, screenshot storyboard, promo tile direction, privacy policy, single-purpose justification, permission justifications, data-use answers (all verbatim from spec §5).
 - `test-fixtures/` — F1 (auto), F2 (manual + queue), F3 (empty), F4 (broken install, wrong `q`), F5 (hidden button), F6 (no async), F7 (`/blog/sample-post/` subdirectory), F9 (mjs), plus a README with serving instructions. F8 (subdomain) needs real hosting — see Deferrals.
 
+## 28 August release-candidate correction
+
+- Updated the manifest and popup footer to the current canonical checker URL: `https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/`.
+- Rebuilt `preferred-source-checker-1.0.0.zip` from the runtime files only. The archive is 44,003 bytes with SHA-256 `5e99c9ba3e9bc6602a489d921edf461cb297578aeb4a3863750ce8644cf7d71c`.
+- Relabelled the first store frame as a localhost fixture audit. It no longer implies a complete public-domain/deeplink pass that the genuine capture does not show.
+- Removed the review-state sentence from the public store description while preserving the internal not-submitted status outside the copy block.
+
 ## Design decisions within spec latitude
 
 - **Detector `qMatchesSite`:** the detector is chrome-free and PSL-free, so it compares the deeplink `q` (lowercased, `www.` stripped) against the page host and the host minus `www.` — equivalent to "displayDomain or full host" for every case the spec enumerates.

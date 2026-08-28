@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preferred Sources Chrome Site Checker screenshot</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        color: #0f2343;
+        background: #eef4fb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1280px;
+        height: 800px;
+        margin: 0;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 15% 15%, #ffffff 0 2%, transparent 32%),
+          linear-gradient(135deg, #f7faff 0%, #e9f1fb 100%);
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1fr 484px;
+        gap: 64px;
+        height: 100%;
+        padding: 64px 74px;
+      }
+
+      .copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .eyebrow {
+        margin: 0 0 22px;
+        color: #1262cf;
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 610px;
+        margin: 0;
+        font-size: 56px;
+        line-height: 1.02;
+        letter-spacing: -0.045em;
+      }
+
+      .description {
+        max-width: 590px;
+        margin: 28px 0 0;
+        color: #3e526e;
+        font-size: 25px;
+        line-height: 1.38;
+      }
+
+      .proof {
+        display: inline-flex;
+        align-items: center;
+        align-self: flex-start;
+        gap: 10px;
+        margin-top: 34px;
+        padding: 11px 16px;
+        border: 1px solid #b8cbe5;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.8);
+        color: #244669;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .proof::before {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #16a36a;
+        content: "";
+      }
+
+      .capture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+      }
+
+      .capture img {
+        display: block;
+        width: 414px;
+        height: 680px;
+        border: 1px solid #c6d3e3;
+        border-radius: 14px;
+        box-shadow: 0 26px 70px rgba(15, 35, 67, 0.22);
+        object-fit: fill;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="copy">
+        <p class="eyebrow">Chrome Site Checker for Preferred Sources</p>
+        <h1 id="title"></h1>
+        <p class="description" id="description"></p>
+        <p class="proof">Genuine local fixture and working extension</p>
+      </section>
+      <section class="capture">
+        <img id="capture" alt="" />
+      </section>
+    </main>
+    <script>
+      const states = {
+        local: {
+          title: "Test implementation details locally",
+          description:
+            "Review SDK, mode and button rendering while keeping localhost eligibility and deeplink limits explicit.",
+          image:
+            "raw/preferred-sources-chrome-checker-local-fixture-audit-1280x800.png",
+        },
+        manual: {
+          title: "Understand manual mode",
+          description:
+            "See custom-trigger guidance and identify a missing deeplink fallback before release.",
+          image:
+            "raw/preferred-sources-chrome-checker-manual-mode-warning-1280x800.png",
+        },
+        broken: {
+          title: "Find a broken installation",
+          description:
+            "Turn a missing SDK and wrong-domain fallback into specific, practical fixes.",
+          image:
+            "raw/preferred-sources-chrome-checker-broken-install-fix-1280x800.png",
+        },
+        hidden: {
+          title: "Spot a hidden button",
+          description:
+            "Detect markup that exists in the page but cannot provide a usable reader journey.",
+          image:
+            "raw/preferred-sources-chrome-checker-hidden-button-warning-1280x800.png",
+        },
+        async: {
+          title: "Catch an SDK loading issue",
+          description:
+            "Flag publisher.js without the recommended async attribute and review the remaining checks.",
+          image:
+            "raw/preferred-sources-chrome-checker-sdk-no-async-warning-1280x800.png",
+        },
+      };
+      const key = new URLSearchParams(location.search).get("state") || "local";
+      const state = states[key] || states.local;
+      document.querySelector("#title").textContent = state.title;
+      document.querySelector("#description").textContent = state.description;
+      document.querySelector("#capture").src = state.image;
+    </script>
+  </body>
+</html>
