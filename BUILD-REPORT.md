@@ -1,7 +1,7 @@
-# Build report — Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker
+# Build report — Add as Preferred Source Button & Popup for Google — Chrome Site Checker
 
 **Built:** 26 August 2026
-**Release state updated:** 28 August 2026
+**Release state updated:** 30 August 2026
 **Spec:** `specs/04-chrome-extension-spec.md` v1.0 (sole input)
 **Output:** `build/chrome-extension/preferred-source-checker/` (loadable unpacked as-is)
 
@@ -31,7 +31,7 @@ preferred-source-checker/
 │   ├── eligibility.js             pure analyse(url) → E1–E6; chrome-free
 │   ├── psl-lite.js                ~190-entry curated public-suffix subset + matcher
 │   ├── strings.js                 every user-facing string, verbatim spec copy;
-│   │                              PSC_MODULE_VERSION = '1.0.0'
+│   │                              PSC_MODULE_VERSION = '1.0.1'
 │   ├── render.js                  checklist derivation (§2.2.4) + DOM rendering;
 │   │                              chrome-free (tab opening delegated via opts.openTab)
 │   └── history.js                 createHistory(storageKey) — cap 200, one entry per
@@ -52,7 +52,7 @@ Sibling deliverables in `build/chrome-extension/`:
 ## 28 August release-candidate correction
 
 - Updated the manifest and popup footer to the current canonical checker URL: `https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/`.
-- Rebuilt `preferred-source-checker-1.0.0.zip` from the runtime files only. The archive is 44,003 bytes with SHA-256 `5e99c9ba3e9bc6602a489d921edf461cb297578aeb4a3863750ce8644cf7d71c`.
+- Rebuilt `preferred-source-checker-1.0.0.zip` from the runtime files only. The enlarged bookmark-and-star transparent-icon candidate archive is 46,989 bytes with SHA-256 `4d5d305200fcebecd00909f316e87ab0d5932b7b6dbe8099d67a21f3be56bd2a`.
 - Relabelled the first store frame as a localhost fixture audit. It no longer implies a complete public-domain/deeplink pass that the genuine capture does not show.
 - Removed the review-state sentence from the public store description while preserving the internal not-submitted status outside the copy block.
 
@@ -65,6 +65,23 @@ Sibling deliverables in `build/chrome-extension/`:
 - Left the three developer-policy certifications unchecked and **Submit for review** untouched for David. The dashboard confirmed that certification is the only remaining submission blocker.
 - Loaded the unpacked build in stable Chrome and smoke-tested the F1 local fixture and F4 broken-install fixture. F1 reported the expected localhost eligibility limit while detecting the SDK, auto mode and rendered button; F4 correctly reported the missing SDK and wrong-domain deeplink.
 
+## Chrome Web Store publication — 29 August 2026
+
+- The publisher dashboard visibly reports the dedicated item as **Published - public**. Its direct public URL resolves to the correct listing at `https://chromewebstore.google.com/detail/add-as-preferred-source-b/dnifhlampnjpfigeniaoihblbdegijgp`.
+- Chrome Web Store search had not indexed the newly published item at the user's first check. Google's discovery documentation says a recently published extension can take a few hours to appear and advises checking the selected Distribution regions.
+- Version 1.0.1 became the public package on 30 August 2026; the live listing exposes `Version 1.0.1` and `Updated August 30, 2026`.
+
+## Version 1.0.1 listing refresh — 29 August 2026
+
+- Chrome Web Store approval completed on 30 August 2026. The public listing is `https://chromewebstore.google.com/detail/add-as-preferred-source-b/dnifhlampnjpfigeniaoihblbdegijgp`.
+
+- Shortened the package title to `Add as Preferred Source Button & Popup for Google` and replaced the summary with a 99-character implementation-check description.
+- Rebuilt `preferred-source-checker-1.0.1.zip` from 17 runtime files in 22 archive entries. The final archive is 46,941 bytes with SHA-256 `8decfcad00539097f23645c5d587f2c3987947cb8eeeaa7d5df3c1540f40cfe5`; every archived file byte-matches the current runtime source.
+- Canonicalised the in-extension generator URL to the live `/tools/suite/` route.
+- Replaced the Store icon with the large orange bookmark, navy star and cyan-corner mark; refreshed the 440 × 280 and 1400 × 560 promotional tiles to the same identity.
+- Recaptured all five genuine Store screenshots from the real v1.0.1 extension. Each is a unique 1280 × 800 RGB PNG and visibly reports `v1.0.1` for its matching fixture state.
+- Reduced the Store description to the extension's single purpose, checks, privacy, limits and canonical support links. Chrome processed and published this v1.0.1 listing on 30 August 2026.
+
 ## Design decisions within spec latitude
 
 - **Detector `qMatchesSite`:** the detector is chrome-free and PSL-free, so it compares the deeplink `q` (lowercased, `www.` stripped) against the page host and the host minus `www.` — equivalent to "displayDomain or full host" for every case the spec enumerates.
@@ -73,9 +90,9 @@ Sibling deliverables in `build/chrome-extension/`:
 
 ## Icons
 
-`icons/icon-*.png` are real, working PNGs rasterised by `tools/generate-icons.cjs` (pure Node + zlib, 4×4 supersampling) from the motif in `assets/icon.svg`: rounded-square Opace blue `#0b57d0`, white star, small magnifier lower-right; star-only at 16 px, flat, no gradients — per spec §5.6. The extension loads unpacked with them today.
+`icons/icon-*.png` now use a bold orange bookmark with a navy preferred-source star and a small cyan corner accent on a genuinely transparent canvas. The painted mark occupies roughly 94% of Chrome's square icon slot so it has the same perceived size as strong square and octagonal extension icons instead of reading as a narrow ribbon. It remains legible at 16 px and 32 px, visually distinct from Essential SEO Toolkit's magnifier-and-bars mark and does not use Google's protected `G` artwork or imply Google ownership. The 16, 32, 48 and 128 px runtime exports and the 128 px Store icon are RGBA PNGs with real zero-alpha pixels. The earlier dark-background exports are preserved under `store-assets/archive/2026-08-29-dark-background/`; the rejected document-and-check candidate is preserved under `store-assets/archive/2026-08-29-rejected-document-check/`; the smaller bookmark candidate is preserved under `store-assets/archive/2026-08-29-before-large-footprint/`. The Store screenshots and promotional banners were refreshed separately for v1.0.1.
 
-The current generated exports are valid, dimension-checked, packaged and used in the saved store draft. A future designer refresh can replace them file-for-file, but it is not a functional or submission blocker.
+The current generated exports are valid, dimension-checked and packaged locally. The 440 × 280 and 1400 × 560 tiles use the same bookmark identity, while the five retained fixture scenarios have been recaptured from v1.0.1.
 
 ## Verification results
 
@@ -110,8 +127,8 @@ Note on the harness: the detector is exercised against fake-DOM constructions eq
 
 - **v1.1 features (per spec §2.5):** history UI, CSV export UI, `Clear history` — storage layer ships in v1 and is recording silently; no UI built, as specified.
 - **F8 subdomain fixture:** requires the fixture set hosted on a real domain with a subdomain (e.g. GitHub Pages); cannot be exercised from localhost.
-- **Optional designer icon refresh:** the current valid exports ship in the ZIP and draft; a later art-directed file-for-file replacement is cosmetic rather than required for v1.0.0.
-- **Screenshot capture:** a dedicated Chrome for Testing profile loaded the unpacked extension and exercised F1, F2, F4, F5 and F6. The five final PNGs are 1280×800 canvases; the popup pixels remain at their native dimensions on an honest padded frame. Filenames, alt text and captions are recorded in `store-listing.md`.
+- **Store processing:** complete for v1.0.1; the public page exposes the approved version and updated date.
+- **Screenshot capture:** a dedicated Chrome profile loaded v1.0.1 and exercised F1, F2, F4, F5 and F6. The five final PNGs are unique 1280×800 RGB canvases; filenames, alt text and captions are recorded in `store-listing.md`.
 - **Promotional assets:** the reviewed and uploaded files are dimension-checked under `store-assets/`: `add-as-preferred-source-chrome-promo-440x280.png` (440×280 PNG), `add-as-preferred-source-chrome-marquee-1400x560.png` (1400×560 PNG), `preferred-source-checker-logo.png` (512×512 PNG) and `add-as-preferred-source-chrome-icon-128.png` (128×128 PNG).
 - **Remaining extended manual matrix:** the stable-Chrome F1/F4 smoke pass is complete. AC14 (SDK-blocked re-scan flow), AC16 (300 ms timing), AC17/AC19/AC30 (tab/network observation), AC22 (offline), AC23–AC27 (full rendering, contrast, keyboard, screen-reader and reduced-motion sweep) and a Chrome 116-specific pass remain useful post-draft QA rather than evidence supplied by the Node harness.
 - **Privacy disclosure:** the verified public policy URL is `https://opace.agency/privacy-policy/` (HTTP 200). The extension-specific disclosure records `26 August 2026` and `info@opace.co.uk`, verified against the public Opace policy.

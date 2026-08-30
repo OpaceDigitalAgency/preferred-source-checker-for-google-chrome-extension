@@ -1,10 +1,10 @@
-# Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker
+# Add as Preferred Source Button & Popup for Google — Chrome Site Checker
 
-This copy is saved in a separate Chrome Web Store draft for Opace Digital Agency. The extension is built and tested at 33/33, but it has **not been submitted for review**. Do not describe it as published, live or reviewed until the store records those states.
+Version 1.0.1 is published publicly in the Chrome Web Store. The live title, icon, summary, screenshots and version were verified on 30 August 2026.
 
 ## Listing fields
 
-- **Name:** `Add as Preferred Source Button & Popup for Google (SEO & AI Overviews)`
+- **Name:** `Add as Preferred Source Button & Popup for Google`
 - **Product modifier:** `Chrome Site Checker` (the extension audits the implementation; it does not install the button)
 - **Category:** `Developer Tools`
 - **Language:** `English`
@@ -12,11 +12,13 @@ This copy is saved in a separate Chrome Web Store draft for Opace Digital Agency
 - **Website / homepage:** `https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/`
 - **Support URL:** `https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/`
 - **Privacy policy URL:** `https://opace.agency/privacy-policy/` (verified HTTP 200 on 26 August 2026; Opace's canonical public policy)
-- **Draft item ID:** `dnifhlampnjpfigeniaoihblbdegijgp`
-- **Draft URL:** `https://chrome.google.com/u/4/webstore/devconsole/4a1d0b88-3c43-484f-90ed-cb4156de16bb/dnifhlampnjpfigeniaoihblbdegijgp/edit`
+- **Item ID:** `dnifhlampnjpfigeniaoihblbdegijgp`
+- **Dashboard URL:** `https://chrome.google.com/u/4/webstore/devconsole/4a1d0b88-3c43-484f-90ed-cb4156de16bb/dnifhlampnjpfigeniaoihblbdegijgp/edit`
 - **Publisher:** Opace Digital Agency
-- **Release state:** Draft saved; owner certifications and Submit for review remain
-- **Release date:** Not set. Complete in the dashboard at submission time.
+- **Public listing:** `https://chromewebstore.google.com/detail/add-as-preferred-source-b/dnifhlampnjpfigeniaoihblbdegijgp`
+- **Release state:** Version 1.0.1 published publicly
+- **Initial release:** 28 August 2026
+- **Latest update:** 30 August 2026
 - **Privacy contact:** `info@opace.co.uk` (verified against Opace's public privacy policy on 26 August 2026).
 
 ## Short description
@@ -24,52 +26,54 @@ This copy is saved in a separate Chrome Web Store draft for Opace Digital Agency
 Maximum 132 characters:
 
 ```text
-Free SEO checker for Google Preferred Sources: eligibility, button implementation and a link to Google's add page. Runs locally.
+Check Google Preferred Sources eligibility, button and popup setup, and fallback links on any page.
 ```
 
 ## Full description
 
 ```text
-Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker audits the Google Preferred Sources implementation on the page you are viewing. This free Chrome companion reports domain eligibility, SDK and button setup, fallback-link health and practical fixes in one click.
+Add as Preferred Source Button & Popup for Google audits the Preferred Sources implementation on the page you are viewing. This free Chrome companion checks domain eligibility, the publisher SDK, button setup and fallback-link health, then provides practical fixes.
 
-Google's Preferred Sources lets readers choose publications they want to see more of. Google says fresh and relevant content from a selected source is more likely to appear in that reader's Top Stories and may receive a Preferred Sources badge in AI Mode and AI Overviews. Google has reported that people who select a source are about twice as likely to click through to it.
+WHAT IT CHECKS
 
-This is a reader-level preference, not a site-wide ranking factor or a guarantee of rankings, traffic, inclusion or AI citations. Publishers can provide Google's official popup button or a direct preferences link, but the implementation still needs checking after it is added.
+• Domain and subdomain eligibility, including common publication paths such as /blog
+• Whether publisher.js or publisher.mjs is loaded and uses async
+• Automatic or manual rendering mode
+• Whether the button element is present, visible and populated
+• Whether the fallback preferences link is valid and matches the current site
+• A ready-to-copy automatic-mode embed with a no-JavaScript fallback
 
-WHAT IT DOES
+The Add action opens Google's public source-preferences page for the current domain. You complete the addition there. The extension does not click, fill or automate that page, and it cannot report a confirmed addition.
 
-1. Eligibility check: classifies the current host as a domain, www domain or subdomain and flags common publication paths such as /blog. Preferred Sources applies at domain and subdomain level only. The checker links to Google's source tool because it cannot confirm automatically whether Google recognises the site as a source.
+WHO IT HELPS
 
-2. Implementation detector: scans the current page and reports a checklist:
-• SDK loaded: is Google's publisher.js or publisher.mjs present, and is it async?
-• Mode: is the page using automatic rendering or manual control?
-• Button element: is google-add-preferred-source-btn present, visible and populated with Google's button iframe when available?
-• Deeplink fallback: is there a valid link to google.com/preferences/source, and does its q value match the site?
-Failed checks include plain-English fix guidance and ready-to-paste examples.
-
-3. Add-page link: the Add as preferred on Google action opens Google's own source preferences page for the current domain in a new tab. You complete the add on Google's page. The extension does not click, fill or automate Google's interface, and it cannot detect a completed addition.
-
-4. Copy embed snippet: copies the standard automatic-mode embed plus a no-JavaScript fallback link, personalised to the current domain.
-
-WHO IT IS FOR
-
-SEO consultants checking Preferred Sources readiness, agencies reviewing client deployments, and publishers verifying an embed after installation.
-
-WHY CHECKING MATTERS
-
-A missing async attribute, hidden button, mismatched fallback domain or subdirectory assumption can leave a publisher with an implementation that looks complete but does not provide the intended reader journey. The checker turns those technical details into a short checklist and specific next actions. It does not estimate rankings or claim that Google has accepted the site.
+Publishers, SEO consultants and agencies can use the checker after installing a Preferred Sources button, or while diagnosing a missing SDK, hidden control, mismatched fallback domain or subdirectory assumption.
 
 LOCAL-FIRST PRIVACY
 
-The page scan runs in the browser and does not modify the page. The extension stores audit metadata in chrome.storage.local for the user's device. It does not transmit, sync or upload that history, and there is no analytics service.
+The scan runs in your browser and does not modify the page. Audit metadata is stored only in chrome.storage.local on your device. There is no remote code, background analytics service or upload of scan results.
 
-The extension does not make background requests or fetch scan data to a service. Clicking Add, Verify, the generator or an Opace link opens the chosen destination in a new tab. Those user-triggered navigations are visible actions, not silent collection. The extension does not claim that a source was added successfully.
+The activeTab and scripting permissions support the one-off page check. storage keeps local audit history, and clipboardWrite copies the embed only after you choose that action.
 
-MORE FROM OPACE
+LIMITATIONS
 
-Find the Preferred Sources product hub at https://opace.agency/add-as-preferred-source-button-for-google/ and the online eligibility checker at https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/. The button and embed-code generator at https://opace.agency/add-as-preferred-source-button-for-google/button-generator/ supports styled and platform-specific examples. The suite also includes a WordPress plugin repository at https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google-wordpress-plugin and open-source framework packages at https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google.
+The checker reports the markup and configuration visible on the current page. It cannot determine whether Google recognises a publication, guarantee rankings or traffic, or confirm inclusion in Top Stories, AI Mode or AI Overviews.
 
-Built by Opace Digital Agency at https://opace.agency/, a UK agency working from Birmingham and internationally. Explore Opace SEO services at https://opace.agency/services/seo/. This independent extension is not affiliated with, endorsed by or sponsored by Google. Google is a trademark of Google LLC.
+PRODUCT AND SUPPORT
+
+Product hub:
+https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/
+
+Online checker and support:
+https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/
+
+Button and code generator:
+https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-generator/
+
+Source code:
+https://github.com/OpaceDigitalAgency/preferred-source-checker-for-google-chrome-extension
+
+Built by Opace Digital Agency. This independent extension is not affiliated with, endorsed by or sponsored by Google. Google is a trademark of Google LLC.
 ```
 
 ## Privacy policy text
@@ -77,7 +81,7 @@ Built by Opace Digital Agency at https://opace.agency/, a UK agency working from
 The public policy URL above is Opace's canonical Privacy & Cookie Policy and currently returns HTTP 200. Paste the extension-specific disclosure below into the dashboard where permitted.
 
 ```text
-Privacy Policy: Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker
+Privacy Policy: Add as Preferred Source Button & Popup for Google — Chrome Site Checker
 Last updated: 26 August 2026
 
 The public Opace Privacy & Cookie Policy is available at https://opace.agency/privacy-policy/. The extension-specific practices below apply to this Chrome companion.
@@ -172,9 +176,9 @@ Five genuine 1280 x 800 captures are ready under `store-assets/screenshots/`. Ea
 
 ## Canonical links
 
-- [Preferred Sources product hub](https://opace.agency/add-as-preferred-source-button-for-google/)
+- [Preferred Sources product hub](https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/)
 - [Online eligibility checker](https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/)
-- [Button and embed-code generator](https://opace.agency/add-as-preferred-source-button-for-google/button-generator/)
+- [Button and embed-code generator](https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-generator/)
 - [Opace SEO services](https://opace.agency/services/seo/)
 - [Opace Digital Agency](https://opace.agency/)
 - [Opace Digital Agency GitHub organisation](https://github.com/OpaceDigitalAgency)

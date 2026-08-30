@@ -1,12 +1,12 @@
-# Add as Preferred Source Button & Popup for Google (SEO & AI Overviews) — Chrome Site Checker
+# Add as Preferred Source Button & Popup for Google — Chrome Site Checker
 
 ![Add as Preferred Source Button and Popup for Google Chrome Site Checker for SEO and AI Overviews](store-assets/add-as-preferred-source-chrome-marquee-1400x560.png)
 
 *Audit a Preferred Sources button and popup implementation from Chrome without transmitting scan data.*
 
-The Chrome Site Checker is the companion audit surface for **Add as Preferred Source Button & Popup for Google (SEO & AI Overviews)**. It checks a site's Google Preferred Sources implementation from the current tab. It classifies domain eligibility, checks the publisher SDK, mode, button element and fallback deeplink, then gives practical fix guidance. It audits locally; it does not install or add the button for you.
+The Chrome Site Checker is the companion audit surface for **Add as Preferred Source Button & Popup for Google**. [Install it from the Chrome Web Store](https://chromewebstore.google.com/detail/add-as-preferred-source-b/dnifhlampnjpfigeniaoihblbdegijgp). It checks a site's Google Preferred Sources implementation from the current tab. It classifies domain eligibility, checks the publisher SDK, mode, button element and fallback deeplink, then gives practical fix guidance. It audits locally; it does not install or add the button for you.
 
-**Status:** built and tested: 33/33 automated checks passed on 26 August 2026. The extension has not been submitted to the Chrome Web Store.
+**Status:** v1.0.1 is public in the Chrome Web Store. The live listing and version were verified on 30 August 2026.
 
 The package is Manifest V3 and currently uses `activeTab`, `scripting`, `storage` and `clipboardWrite`. There is no background worker, persistent content script, remote code or analytics service.
 
@@ -16,7 +16,7 @@ Preferred Sources lets an individual Google user choose publications they want t
 
 The implementation is therefore worth checking, but it is not a general ranking shortcut. A button does not guarantee visibility, traffic, inclusion or an AI citation; it gives an already-engaged reader an easier way to express a preference which Google can use for that reader's results.
 
-[Google's publisher guidance](https://developers.google.com/search/docs/appearance/preferred-sources) · [Google's click-through finding](https://blog.google/products-and-platforms/products/search/preferred-sources-language-expansion/) · [Preferred Sources product hub](https://opace.agency/add-as-preferred-source-button-for-google/)
+[Google's publisher guidance](https://developers.google.com/search/docs/appearance/preferred-sources) · [Google's click-through finding](https://blog.google/products-and-platforms/products/search/preferred-sources-language-expansion/) · [Preferred Sources product hub](https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/)
 
 ## What it checks
 
@@ -69,11 +69,11 @@ The detector reads page markup when you open the popup and does not change the p
 
 The extension does not make background requests or send scan data to a service. When you click **Add as preferred on Google**, it opens Google's source preferences page for the current display domain in a new tab. You complete the add on Google's page; the extension does not click, fill or automate that page. The Verify, generator and Opace links also open only after you choose them. These user-triggered navigations are distinct from silent data transmission.
 
-The public policy link for this Chrome companion is Opace's canonical [Privacy & Cookie Policy](https://opace.agency/privacy-policy/). The extension-specific disclosure, including local storage and user-triggered navigation, is kept in [`store-listing.md`](store-listing.md) for the pending Chrome Web Store submission.
+The public policy link for this Chrome companion is Opace's canonical [Privacy & Cookie Policy](https://opace.agency/privacy-policy/). The extension-specific disclosure, including local storage and user-triggered navigation, is kept in [`store-listing.md`](store-listing.md).
 
 Google's SDK exposes `preferredSource.init({ theme, lang })` and `preferredSource.addPreferredSource()`, but no completion callback, promise or event. The extension can report detected markup and clicks on its own controls, not a confirmed preferred-source addition.
 
-This is an independent Opace tool. It is not affiliated with, endorsed by or sponsored by Google. The Chrome Web Store listing is a local candidate and has not been submitted.
+This is an independent Opace tool. It is not affiliated with, endorsed by or sponsored by Google.
 
 ## Install and run a check
 
@@ -98,9 +98,9 @@ The reusable modules in `preferred-source-checker/lib/` are dependency-free and 
 
 ## Links
 
-- [Preferred Sources product hub](https://opace.agency/add-as-preferred-source-button-for-google/)
+- [Preferred Sources product hub](https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/)
 - [Online eligibility checker](https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-checker/)
-- [Button and embed-code generator](https://opace.agency/add-as-preferred-source-button-for-google/button-generator/)
+- [Button and embed-code generator](https://opace.agency/tools/suite/add-as-preferred-source-button-for-google/button-generator/)
 - [Live framework component demo](https://opacedigitalagency.github.io/add-as-preferred-source-button-for-google/)
 - [Preferred Sources WordPress plugin repository](https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google-wordpress-plugin)
 - [Preferred Sources framework packages repository](https://github.com/OpaceDigitalAgency/add-as-preferred-source-button-for-google)
