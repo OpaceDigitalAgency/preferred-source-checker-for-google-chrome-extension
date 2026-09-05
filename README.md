@@ -1,6 +1,6 @@
 # Add as Preferred Source Button & Popup for Google — Chrome Site Checker
 
-![Add as Preferred Source Button and Popup for Google Chrome Site Checker for SEO and AI Overviews](store-assets/add-as-preferred-source-chrome-marquee-1400x560.png)
+![Add as Preferred Source Button & Popup for Google — Chrome Site Checker](docs/assets/google-preferred-sources-button-banner-2026-09.png)
 
 *Audit a Preferred Sources button and popup implementation from Chrome without transmitting scan data.*
 
